@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FinanceItemList</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/foundation-float.css') }}">
+    </head>
+    
+    <body>
+        <div class="grid-container">
+            {% for item in lists %}
+            <div class="row">
+                <div class="columns small-6 large-4"><strong>{{ item["name"] }}</strong></div>
+                <div class="columns small-2 large-4"><p>{{ item["code"] }}</p></div>
+                <div class="columns small-4 large-4"><p>{{ item["value"] }}</p></div>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+<html>
